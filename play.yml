@@ -1,5 +1,6 @@
 - hosts: all
   gather_facts: no
   tasks:
-    - raw: 'whoami'
-    - raw: 'date'
+    - raw: 'whoami > ~/whoami.txt'
+    - raw: 'date > ~/date.txt'
+    - raw: 'cat ~/*.txt'
